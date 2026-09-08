@@ -1,0 +1,2415 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<!-- noindex	Do not show this page in search results and do not show a "Cached" link in search results.
+	 nofollow	Do not follow the links on this page
+	 none		Equivalent to noindex, nofollow -->
+<META NAME="ROBOTS" CONTENT="NONE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+<title>STALL Authentication</title>
+
+<link rel="Shortcut Icon" type="image/ico" href='https://sarathi.parivahan.gov.in/cdn-sarathi/images/nhai.ico?v=1.0' />
+
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap-theme.min.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap.min.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/jquery/jquery-ui.min.css?v=1.0' rel="stylesheet" type="text/css" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/custom.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan.css?v=1.0' rel="stylesheet" type="text/css" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan_layout.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sow4.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/fonts/font-awesome.min.css?v=1.0' rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery.min.js?v=1.0'></script>
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery-ui.min.js?v=1.0'></script>
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/bootstrap/bootstrap.min.js?v=1.0'></script>
+
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/modal.js?v=1.0'></script>
+
+
+
+
+
+<script type="text/javascript">
+	var is_s5redirection = false;
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style")
+		msViewportStyle.appendChild(document
+				.createTextNode("@-ms-viewport{width:auto!important}"))
+		document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+	}
+	
+	 function changeCaptcha(){
+			$("#capimg").attr("src", "jsp/common/captchaimage.jsp?"+(new Date().getTime()));
+			$("#commonCaptcha").val('');
+	}
+	 
+	$(document).ready(function() {
+		//cdac localisation line
+		//$("select.NALOC > option").addClass("NALOC");
+		//end
+		
+// 		loadScript('./js/scripts.js?v=0.1');
+		var windowsize = $(window).width();
+		 if (windowsize > 1600) {  //windowsize > 767
+			$('#bdheight').css("min-height", 400);
+		}
+
+	});
+
+	var width = null;
+	$(document).ready(function() {
+		$('#list').click(function() {
+			//  alert("inside function ready");
+			//alert($('#tableId tr:eq(1) td').length);
+			//	alert("TR Element By Id : "+$('#tr_tableId').length);
+		});
+		
+		/* var timeinter = setInterval(function() {
+			width = $('#tableId tr:eq(1) td').width();
+			if (width > 0) {
+				//  alert("width=="+width);
+				for (var i = 0; i < $('#tableId tr:eq(1) td').length; i++) {
+					// alert("$('#tableId tr:eq(1) td:eq('+i+')').width()====="+$('#tableId tr:eq(1) td:eq('+i+')').width());
+					$('#tableId tr:eq(0) th:eq(' + i + ')').width(
+							$('#tableId tr:eq(1) td:eq(' + i + ')').width());
+				}
+				//	  clearInterval(timeinter);
+			}
+		}, 0); */
+	});
+
+</script>
+
+</head>
+<body>
+<!-- <div id="Sarathi_Lang_ID">Language:</div> -->
+
+
+	<div class="main">
+		<div class="container padding0px">
+			<div class="header">
+				
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<style>
+.change-statenew
+{
+  /*   margin: 0px 4px; */
+}
+.change-statenew a
+{
+    background-color: rgb(60, 118, 61);
+    padding: 5px 6px;
+    border-radius: 5px;
+    letter-spacing: 0.7px;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+}
+.csc_agency_app_ {
+	text-decoration: none;
+	color: #ffffff;
+	border-top: 1px solid #ffffff;
+	padding: 0.7rem;
+	background: #1e7c9a;
+	white-space: nowrap;
+}
+ .date_time
+{
+text-align: center;
+} 
+.sarathinew_logo
+{
+width: 100px;
+height: 100px;
+margin-top: -10px;
+}
+.sarathi_parivahantxt
+{
+text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+    line-height: 25px;
+    font-size: 18px;
+    font-family: auto;
+    padding: 17px 0px 0px 0px;
+    margin-left: -32px;
+}
+.ministryofroad_text p
+{
+    color: #ffffff;
+    margin: 0px 0px 0px 0px !important;
+    line-height: 23px;
+    font-family: auto;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.ministryofroad_text
+{
+    margin: 10px 0px 0px 0px !important;
+}
+.india_new_emblem img
+{
+padding: 0px 0px 0px 15px;
+}
+.sarathiheader_page
+{
+background:#1CA6EF; 
+clear:both; 
+padding:5px 0px;
+color:ffffff !important;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 3%;
+}
+
+.sarathiheader_page .login_page > li
+{
+margin: 0 0 0 28%;
+}
+
+.font3 {
+	color: #0008ffd9;
+    font-weight: 550;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: Trebuchet MS;
+/*     padding-right: 10% !important; */
+	margin-bottom: -4px;
+}
+.input-sm, .form-group-sm .form-control {
+    height: 34px;
+    border: 2px solid #ffffff;
+    background: #ecedee;
+    border-radius: 21px;    
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -58px !important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -58px !important;
+}
+.header-date
+{
+    color:#1c8fd1;
+}
+.col-md-offset-1 {
+    margin-left: 6.333333%;
+}
+.red
+{
+	color:#ffffff !important;
+}
+
+@media screen and (max-width: 600px) {
+	.font3size {font-size:1.6em;
+	
+	}
+	
+.header {
+   
+    background: #15a7ef !important;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 0%;
+}
+.sarathinew_logo
+{
+margin-top: 0px;
+}
+.date_time
+{
+text-align: center;
+}
+}
+@media (min-width: 551px) and (max-width: 991px) {
+	.font3size {font-size:1.6em;}
+	.navbar-inverse .navbar-nav > li > a {
+    color: #081e5b !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 0%;
+}
+.nav > li > a {
+    padding: 6px;
+}	
+.header {
+    
+    background: #15a7ef !important;
+}
+.form-control {
+    margin:  0 0 8px !important;
+}
+.date_time
+{
+text-align: center;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.font3size {font-size:1.7em;}
+}
+@media screen and (min-width: 1200px) {
+	.font3size {font-size:1.7em;}
+}
+.blink {
+  animation: blinker 1s step-start infinite;
+  background-color: #f99a07;
+}
+
+@keyframes blinker {
+  30% {
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="sarathiheader_page">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12 mb_textcenter">
+					<div class="col-md-7 col-sm-7 col-xs-12">
+			 <div class="ministry_nic_logo padding0px mb_textcenter">
+				<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/logo/ministry-nic-logo.png" alt="Ministrylogo" />
+			</div> 			
+			</div>
+			<div class="col-md-5 col-sm-5 col-xs-12" style="text-align: center;">
+			 <div class="ministry_nic_logo padding0px mb_textcenter">
+				<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/logo/parivahan-logo.png" alt="Sarathilogo" />
+			</div>			
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3 col-xs-12 date_time mb_textcenter" style="">
+			<ul class="list-unstyled sarathidate" style="padding-top: 8px; text-decoration:none;">		        
+				<li>
+					<div class="sarathidate_time padding0px" style="color:ffffff; font-size:12px; ">
+						<label class="margin0px bold" style="color: #000;">DATE:</label> <span id="currdate" class="NALOC" style="color:#ffffff !important;"></span>&nbsp;&nbsp;&nbsp;
+						<label style="color: #000; letter-spacing: 0.5px;">TIME:</label> <span id="time" class=""  class="NALOC" style="color:#ffffff;"></span>
+					</div>
+				</li>
+			    <li>
+			    <div style="margin-top: 0.7rem; text-align: center !important; color: #000; border-radius: 5px !important;">
+			    
+			  
+						<!-----------Change State------------>
+					
+					
+						<span class="change-statenew"> 
+						</span>
+					
+				</div>
+			    </li> 
+				<li style="margin-top: 0.7rem;">
+					
+				</li>
+			</ul>	
+		</div>
+		<div class="col-md-1 col-sm-12 col-xs-12 mb_textcenter">
+			<div class="bhashini-plugin-container" id="bhashini-plugin-container1" style="display: flex;align-items: center;gap: 10px; width: 10;">Language:</div>
+		</div>
+		
+	</div>
+</div>
+
+
+	
+	
+	
+		<div class="col-md-12 padding0px" style="text-align: center;">
+			<span id="state_inassociation" class="font3 font3size" style="cursor: pointer;">
+			</span>
+		</div>
+<!-- 		<div class="col-md-12 padding0px font3 font3size" id="state_inassociation"></div> -->
+	
+	<!--<div class="col-md-12 padding0px" style="text-align: center;">
+		<span class="font3 font3size" style="font-size:1.2em;color:#f99a07">
+			<a class="blink" target="_blank" href="https://sarathi.parivahan.gov.in/sarathicms/api/v1/get-resource/NEVNYm02QUp4OG1VRGFNc01LWm0vZkZjYTZTQkMwOXpxendzL1NjZ1d0RHlxVjZRZUNTRDAyUDB6ZVNzb1YweVVpTUdGaUhlc083b2JaWWduQjdYMXc9PQ==">Click here</a> for the Advisory from the MoRTH regarding the validity of Licences during the disruption of SARATHI services
+		</span>
+	</div> -->
+	
+	
+	
+	<form id="csc_agency_post_sub">
+		<input type="hidden" name="UniqueId" id="UniqueId"/>
+		<input type="hidden" name="param" id="param"/>
+		<input type="hidden" name="TYPE" id="TYPE"/>
+	</form>
+</body>
+<script type="text/javascript">
+$("#assStateLbl_id").click(function() {
+	$('#assStateLbl_popup').modal('show');
+});
+
+$("#state_inassociation").click(function() {
+	$('#assStateLbl_popup').modal('show');
+});
+
+// $("#csc_agency_app_status").click(function() {
+function backtoMahaonlineFun(){
+	var agId='null';
+	var linkLabel='null';
+	var returnUrl='null';
+	console.log("agId :"+agId+": linkLabel:"+linkLabel+": returnUrl:"+returnUrl);
+	backToAgencyPortal();
+	}
+// });
+
+function backToAgencyPortal(){
+	$.ajax({
+        url: "checkApplStatus.do",
+        type: "post",
+        success: function(d) {console.log(d);
+	        if(d.method === 'get') {
+	        	var url;
+	        	if(d.ret_url.indexOf("TYPE=RES") != -1) {
+	        		window.location.href = d.ret_url;
+	        	} else if(d.ret_url.indexOf("TYPE=NO") != -1) {
+	        		if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+	        			url = d.ret_url.replace("TYPE=NO", "TYPE=N");
+	        			window.location.href = url;
+	        		}
+	        	} else if(d.ret_url.indexOf("TYPE=N") != -1) {
+	        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+	        			window.location.href = d.ret_url;
+	        		}
+	        	} else if(d.ret_url.indexOf("#") != -1) {
+	        		
+	        	} else {
+	        		window.location.href = d.ret_url;
+	        	}    	
+	        } else if(d.method === 'post') {
+	        	if(d.id == 'UPeSathi') {
+	        		$("#UniqueId").val(d.UniqueId);
+		        	$("#param").val(d.param);
+		        	$("#TYPE").val(d.TYPE);
+		        	$("#csc_agency_post_sub").attr("action", d.ret_url);
+		        	
+	        		if(d.TYPE == "RES") {
+	        			if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+	        				$("#csc_agency_post_sub").submit();
+	        			}
+		        	} else if(d.TYPE == "NO") {
+		        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+		        			$("#TYPE").val('N');
+		        			$("#csc_agency_post_sub").submit();
+		        		}
+		        	} else if(d.TYPE == "N") {
+		        		$("#csc_agency_post_sub").submit();
+		        	}
+				}
+	        }
+        }
+    });
+}
+
+/* $("#csc_agency_app_status").click(function() {
+	$.ajax({
+        url: "checkApplStatus.do",
+        type: "post",
+        success: function(d) {//alert(d);
+        //window.location.href = d;
+        	 if(d.indexOf("TYPE=RES") != -1) {
+        		window.location.href = d;
+        		/* if(confirm("For this application all the flows are completed.")) {
+        			
+        		} */
+        	 /*} else if(d.indexOf("TYPE=NO") != -1) {
+        		if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+        			d = d.replace("TYPE=NO", "TYPE=N");
+        			window.location.href = d;
+        		}
+        	} else if(d.indexOf("TYPE=N") != -1) {
+        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+        			window.location.href = d;
+        		}
+        	} else if(d.indexOf("#") != -1) {
+        		//window.location.href = d;
+        	} else {
+        		window.location.href = d;
+        	}
+        }
+    });
+}); */
+</script>
+<script> 
+
+	
+	var dateStr=1788544737301
+
+	var serverTimeMillisGMT = Date.parse(new Date(dateStr).toUTCString());
+	var str="AM";
+	var count=0;
+	function msToTime(duration) {
+        var milliseconds = duration % 1000
+            , seconds = Math.floor((duration / 1000) % 60)
+            , minutes = Math.floor((duration / (60 * 1000)) % 60)+30
+            , hours = Math.floor((duration/(1000*60*60))%24)+5+parseInt(minutes>59 ? "1" :"0" );
+//         console.log("hours==> "+hours);
+       
+        if(hours>12){
+            str=hours==24 ? "AM" :"PM";
+        	hours= hours-12;
+        	
+        }
+        
+        if(minutes>59){
+        	minutes= minutes-60;
+        }
+        if(hours>12 && hours<25){
+        	hours=hours-12;
+        	
+        }
+        if(hours==12){
+        	str="PM";
+        }
+        	
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10)   ? "0" + minutes :  minutes ;
+        seconds = (seconds < 10)   ? "0" + seconds :  seconds ;
+        count=seconds;
+		var time=hours + ":" +  minutes + ":" + seconds;
+		
+        return time;
+    }
+    
+function noBack(){ 
+	window.history.forward(1);
+}
+var serverTime = "2026-09-04 23:28:57.30201";
+		var localTime = new Date();
+		var ser = new Date(serverTime);
+		var ti = localTime.toLocaleTimeString();
+		var serti = ser.toLocaleTimeString();
+		var myVar = setInterval(function() {
+			myTimer();
+		}, 1000);
+
+		var offset, diff;
+		var localMillisUTC = Date.parse(new Date(serverTime).toUTCString());
+		offset = serverTimeMillisGMT - localMillisUTC;
+		diff = localMillisUTC + offset;
+		var d = new Date(serverTime);//time;
+		var curr_date = d.getDate() < 10 ? "0" + d.getDate() : d.getDate();
+		var curr_month = d.getMonth() < 9 ? "0" +(d.getMonth() + 1) : parseInt(d.getMonth()) + 1; 
+		//var curr_month = parseInt(d.getMonth()) + 1;
+		var curr_year = d.getFullYear();
+		var colorArr = new Array();
+		colorArr.push("#FA026A");
+		colorArr.push("#9B02FA");
+		colorArr.push("#4402FA");
+		function myTimer() {
+			try {
+				document.getElementById("currdate").innerHTML = curr_date + "-"
+						+ curr_month + "-" + curr_year;
+				diff = diff + 1000;
+				document.getElementById("time").innerHTML = msToTime(diff)
+						+ " " + str;
+				var i = count % 3;
+				if (i == 0 || i == 1 || i == 2) {
+					var color = Math.floor(Math.random() * 16777215).toString(
+							16);
+					var marq = $("#marq");
+					marq.css('color', colorArr[i]);
+				}
+				
+			} catch (e) {
+			}
+		}
+
+		function brighten(color, percent) {
+			var r = parseInt(color.substr(1, 2), 16);
+			var g = parseInt(color.substr(3, 2), 16);
+			var b = parseInt(color.substr(5, 2), 16);
+
+			return '#' + Math.min(255, Math.floor(r * percent)).toString(16)
+					+ Math.min(255, Math.floor(g * percent)).toString(16)
+					+ Math.min(255, Math.floor(b * percent)).toString(16);
+		}
+	</script>
+	<!--------------------font-size (A, A-, A+)------------------- -->
+	<script> 
+	$('#incfont').click(function () {
+        curSize = parseInt($('body').css('font-size')) + 2;
+        if (curSize <= 24)
+            $('body').css('font-size', curSize);
+    });
+    $('#decfont').click(function () {
+        curSize = parseInt($('body').css('font-size')) - 2;
+
+        if (curSize >= 12)
+            $('body').css('font-size', curSize);
+    });
+    $('#resetfont').click(function () {
+        curSize = parseInt($('body').css('font-size'));
+        $('body').css('font-size', '14px');
+    });
+
+   $('.form-text').bind("cut copy paste", function(e) {
+      e.preventDefault();
+      alert("You cannot paste into this text field.");
+      $('.form-text').bind("contextmenu", function(e) {
+     e.preventDefault();
+  }); });
+
+ $(".faq li > *:not(h4)").hide();
+ $(".faq h4").click(function() {
+ $(this).siblings().slideToggle("slow");
+ });
+	</script>
+	
+
+</html>
+
+			</div>
+			<div class="width100p">
+				
+			</div>
+			<div id="bdheight" class="content">
+				
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript" src="/sarathiservice/static/utils.js">
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<title>STALL4 Authentication</title>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<!-- noindex	Do not show this page in search results and do not show a "Cached" link in search results.
+	 nofollow	Do not follow the links on this page
+	 none		Equivalent to noindex, nofollow -->
+<META NAME="ROBOTS" CONTENT="NONE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+<title>Sarathi</title>
+
+<link rel="Shortcut Icon" type="image/ico" href='https://sarathi.parivahan.gov.in/cdn-sarathi/images/nhai.ico?v=1.0' />
+
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap-theme.min.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap.min.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/jquery/jquery-ui.min.css?v=1.0' rel="stylesheet" type="text/css" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/custom.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan.css?v=1.0' rel="stylesheet" type="text/css" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan_layout.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sow4.css?v=1.0' type="text/css" rel="stylesheet" />
+<link href='https://sarathi.parivahan.gov.in/cdn-sarathi/css/fonts/font-awesome.min.css?v=1.0' rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery.min.js?v=1.0'></script>
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery-ui.min.js?v=1.0'></script>
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/bootstrap/bootstrap.min.js?v=1.0'></script>
+
+<script type="text/javascript" src='https://sarathi.parivahan.gov.in/cdn-sarathi/js/modal.js?v=1.0'></script>
+
+<link rel='shortcut icon' type='image/x-icon' href='images/nhai.ico' />
+<!-- <link rel="stylesheet" type="text/css" href="./css/core.css">
+		<link rel="stylesheet" type="text/css" href="./css/authentication.css"> -->
+<script type="text/javascript" src="./js/sha256.js"></script>
+
+<script src="face-aware/face-aware.js?v=0.2"></script>
+<script src="proctoringMonitor/face-aware/face-api.min.js"></script>
+<script src="SmartLock/SmartSocket.js"></script>
+
+     
+    <script src="proctoringMonitor/face-aware/tfjs.js"></script> 
+    <script src="proctoringMonitor/face-aware/blazeface.js"></script> 
+    <script src="proctoringMonitor/face-aware/face-landmarks-detection.js"></script>
+<!-- for every deployment please change the v value  -->
+
+<!-- Adding for bootstrap -->
+<link href="css/style_uc01.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/authentication.js"></script>
+
+<!-- End -->
+<style>
+    video {
+            width: 290px;
+            height: 200px;
+            border-radius: 10px;
+    }
+   /*  img {
+        width: 200px;
+        border-radius: 10px;
+    } */ 
+    
+#progressbar {
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: grey;
+    counter-reset: step;
+    width: 30%;
+}
+ 
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 33.3%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+ 
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: yellow;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+	text-align: center;
+}
+  
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li.active {
+    color: orange;
+ 
+}
+
+#progressbar li.active:before {
+    background: orange;
+}
+
+#progressbar li.active:after {
+    background: orange;
+}
+
+#progressbar li.process {
+	color: green;
+}
+ 
+#progressbar li.process:before {
+    background: green;
+}
+
+#progressbar li.process:after {
+    background: green;
+}
+#result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+       
+
+        canvas {
+            position: absolute;
+        }
+
+       
+   </style> 
+     
+	
+<script type="text/javascript">
+/* disableEnterKey: function disableEnterKey(e){
+    var key;      
+    if(window.event)
+        key = window.event.keyCode; //IE
+    else
+        key = e.which; //firefox      
+
+    return (key != 13);
+}, */
+$(document).ready(function() {
+    loadScript();
+  });
+
+document.addEventListener("visibilitychange", function (event) {
+	if (document.hidden) {
+		location.reload();
+    }
+});
+
+const navigationEntry = performance.getEntriesByType('navigation')[0].type;
+if (navigationEntry!=='navigate') {
+    alert(navigationEntry+' detected. all operations will be terminated.');
+    window.close();
+}
+
+
+  !function() {
+	function detectDevTool(allow) {
+  	if(isNaN(+allow)) allow = 100;
+    var start = +new Date();
+    debugger;
+    var end = +new Date();
+    if(isNaN(start) || isNaN(end) || end - start > allow) {
+    	alert('DEVTOOLS detected. all operations will be terminated.');
+    	logout();window.close();
+    }
+  }
+  if(window.attachEvent) {
+  	if (document.readyState === "complete" || document.readyState === "interactive") {
+    	detectDevTool();
+      window.attachEvent('onresize', detectDevTool);
+      window.attachEvent('onmousemove', detectDevTool);
+      window.attachEvent('onfocus', detectDevTool);
+      window.attachEvent('onblur', detectDevTool);
+    } else {
+    	setTimeout(argument.callee, 0);
+    }
+  } else {
+  	window.addEventListener('load', detectDevTool);
+    window.addEventListener('resize', detectDevTool);
+    window.addEventListener('mousemove', detectDevTool);
+    window.addEventListener('focus', detectDevTool);
+    window.addEventListener('blur', detectDevTool);
+  }
+}()
+
+function loadScript() {
+	
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "./js/scripts.js?v=0.1";
+    script.id = "scripts";
+    document.body.appendChild(script);
+    $('#scripts').remove();
+ }
+
+
+window.onload=disfun();
+function disfun()
+{
+	document.forms["authentication"]["llappln"].value = "";
+	document.forms["authentication"]["entcaptxt"].value = "";
+	
+	document.addEventListener('contextmenu',event => event.preventDefault());
+
+	$(document).keydown(function (event) {
+		if (event.keyCode == 123 || event.keyCode == 27) {
+            return false;
+        }
+        else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74) || (event.ctrlKey && event.keyCode == 85) || (event.ctrlKey && event.shiftKey && event.keyCode == 67)) {
+            return false;
+        }
+
+    });
+
+}
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function (e) {
+
+    // disable F12 key
+    if(e.keyCode == 123) {
+        return false;
+    }
+
+}
+function back()
+{
+	document.forms["authentication"]["llappln"].value = "";
+	document.forms["authentication"]["dob"].value == "";
+	document.forms["authentication"]["pwd"].value == "";
+	document.authentication.action="authenticationaction.do";
+	document.authentication.submit();
+}
+function changeCaptcha(){
+	$("#capimg").attr("src", "jsp/common/captchaimage.jsp?"+(new Date().getTime()));
+	$("#entcaptxt").val('');
+
+}
+function validateSubmit(){
+	var applicationNumber = document.forms["authentication"]["llappln"] ;
+	//var entcapt=document.getElementById('entcaptxt').value;
+	var entcaptxt = $("#entcaptxt").val();
+	sessionStorage.setItem('entcaptxt', entcaptxt);
+	
+	if (applicationNumber.value.trim() == "") {
+		alert('Please Enter Application Number.');
+		applicationNumber.focus();
+		return false;
+	}
+	else if(entcaptxt.trim() == "") {
+		alert("Please Enter Captcha.");
+		document.getElementById('entcaptxt').focus();
+		return false;
+	}
+	else
+	{
+		try {
+						
+			$.ajax({
+				type : 'POST',
+				url : 'getcaptcha.do',
+				data : {
+					
+					entcaptxt:entcaptxt,
+					llappln:applicationNumber.value.trim()
+
+				},
+				cache : false,
+				async : false,
+				dataType :'json', 
+				success : function(data) { 
+					
+					if(entcaptxt===data[0] )
+					{
+						getAppState();
+					}
+					else
+					{
+						document.getElementById("nextText").innerHTML="Captcha is not matched, please try again";
+						alert("Captcha is not matched, please try again");
+						changeCaptcha();
+						document.forms["authentication"]["llappln"].value =""; 
+						document.forms["authentication"]["entcaptxt"].value =""; 
+					    document.forms["authentication"]["llappln"].focus();
+					}
+				
+				},
+				error : function(error) {
+					//called when there is an error
+					alert("Captcha is not matched, please try again");
+					changeCaptcha();
+					document.forms["authentication"]["llappln"].value =""; 
+					document.forms["authentication"]["entcaptxt"].value =""; 
+				    document.forms["authentication"]["llappln"].focus();
+				}
+			});
+		} catch (err) {
+			//alert("error");
+		}
+	}
+}
+function stringlength(inputtxt, txt, maxlength)
+{ 
+	var field = inputtxt.value; 
+	var mxlen = maxlength;
+
+	if(field.length> mxlen)
+	{ 
+		console.log("Please input the "+txt+" value " +mnlen+ " and " +mxlen+ " characters");
+		inputtxt.value="";
+		inputtxt.focus();
+		return false;
+	}
+	else
+	{ 
+		return true;
+	}
+}
+
+
+ $(document).keypress(
+		  function(event){
+		    if (event.which == '13') {
+		      event.preventDefault();
+		    }
+		  }); 
+	$(function() {
+			 
+			  //$("#loadingImage2").toggle();
+			  $( "#dob").datepicker({
+				  
+		      showOn:"focus",
+			  //buttonImage:"../../images/frm7_calendar_icon.png",
+			 // buttonImageOnly: false,
+			
+		     changeMonth: true,
+			  changeYear:true,
+			  changeDate:true,
+			   dateFormat: 'dd-mm-yy',
+			  'autoclose': true,
+			  yearRange: '1927:2010',
+
+			maxDate : "-192M",
+			numberOfMonths : 01,
+
+		});
+	});
+</script>
+
+
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" >
+
+	<div class="main">
+		<div class="container padding0px">
+			
+			<div id="bdheight" class="content">
+
+				<div class="width100p padding0px" id="mainDiv">
+					<div class="panel panel-primary">
+						<div class="panel-heading" style="text-align: left">
+							<h3 class="panel-title">Applicant Sign In</h3>
+						</div>
+						<div class="panel-body">
+							<div class="col-md-12">
+							<form name="authentication" action="authenticationaction.do"
+										method="post" class="form-horizontal" enctype="multipart/form-data">
+							
+								<div class="row">
+									<div class="col-md-12 bottom-space"
+										style="background-color: #fff; padding: 0px 0px 10px 0px"
+										align="center">
+										<img src="images/Stall_Header.jpg" style="width: 30%;">
+									</div>
+																			<input type="hidden" name="randomSeed" value="" id="randomSeed"/>
+										<input type="hidden" name="saltPassword" value="" id="saltPassword"/>
+
+										
+
+
+										<!-- <div class="row"> -->
+										<div class="col-md-12 top-space" id="applnodiv">
+											<div
+												class="col-md-3 col-md-offset-2 control-label labeled text-right">
+												<!-- <label for="llappln">LL Application Number</label> -->
+												<label for="llappln">LL Application Number</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control input-sm"
+													name="llappln" id="llappln" placeholder="LL Application Number" maxlength="15" onchange="stringlength(document.authentication.llappln,'Application No',15)" onkeypress="return onlyNumericsforApplNo(event);" cssClass="form-control input-sm" required />  
+											  <!-- 	onchange="progressStart();applValidate();getAppState();" /> -->  
+											</div>
+										</div>
+										
+										<div class="col-md-12 top-space"  id="captcha" > <br/>
+							   				
+							   				<div class="col-md-3 col-md-offset-2 control-label labeled text-right">
+												<label class="redColor">*</label> Captcha:
+											</div>
+							   				<div class="col-md-1">
+							  					<input type="text" name="entcaptxt" id="entcaptxt" maxlength="6" autocomplete="off" class="form-control input-sm" placeholder="Enter Captcha Here"  onchange="stringlength(document.authentication.entcaptxt,'Captcha',6)" />
+							  					
+							  				</div>
+							  				<div class="col-md-2" >&nbsp;&nbsp;<img alt="" id="capimg" src="jsp/common/captchaimage.jsp" title="Captcha" style="height:25px;">&nbsp;
+							  					<img alt=""  src="images/refresh.jpg" title="Click Here to Refresh Captcha" style="height: 25px;cursor: pointer;" onclick='changeCaptcha()'>
+							  				<!-- 	<input type="label" name="captreq" id="captreq" value='7r3T0W' />  -->
+							  										  					
+							  				</div><br/>
+										</div><br/>
+										
+										<div class="col-md-12 text-center" id="captsubmit"><input type="button" value="Submit"  class="btn top-space" onclick='validateSubmit()' /></div>
+										
+										 
+										
+										<div class="col-md-12 top-space" id="dobdiv"  style="display: none;">
+											<div
+												class="col-md-3 col-md-offset-2 control-label labeled text-right">
+												<!-- <label for="dob">Date of Birth</label> -->
+												<label for="dob">Date of Birth</label>
+											</div>
+											<div class="col-md-3">
+												<input draggable="false" type="text" name="dob" id="dob" maxlength="10"
+													class="form-control input-sm" placeholder="dd-mm-yyyy"
+													required="required" autocomplete="off"
+													onkeyup="return validatedob()" onChange="return dobValidation()" oncopy="return false" onpaste="return false" ondrag="return false" ondrop="return false"  onchange="stringlength(document.authentication.dob,'Date Of Birth',10)" />
+											</div>
+										</div>
+										
+										
+										<div class="col-md-12 top-space" id="pwddiv"  style="display: none;">
+											<div id="pwdlabel" 
+												class="col-md-3 col-md-offset-2 control-label labeled text-right" >
+												<!-- <label for="pwd">Password</label> -->
+												<label for="pwd">Password</label>
+											</div>
+											<div draggable="false" class="col-md-3" id="pwdtext" >
+												<input type="password" name="pwd" maxlength="6" onkeyup="this.value = this.value.toUpperCase();pwVerify(this);"
+													class="form-control input-sm" placeholder="Password"
+													required onfocus="delmsg()" onchange="return pwValidation()" oncopy="return false" ondrag="return false" onpaste="return false" ondrop="return false"  onchange="stringlength(document.authentication.pwd,'Password',6)" />
+											</div>
+											<div  id="resend" style="display: none;">
+											<input type="button" value='"Resend" Password' class="btn top-space"
+											 onclick="resendpassword()" /></div>
+											 <div class="col-md-12 top-space text-center"  id="resendtxt" style="display: none;"> 
+											<!-- <p style="color: red" class="red">NOTE:If you have not received LLTest Password. Please click Resend Password button </p><br>
+											
+ -->
+  						<p style="color: red" class="red">NOTE:If you have not received LLTest Password. Please click Resend Password button </p>
+											
+  											</div>
+										</div>
+									</div>
+									
+
+										</div>
+										<input type="hidden" id="faceAuth" name="faceAuth" />
+										<input type="hidden" id="bioReq" name="bioReq" />
+									<div id="proctorReq" class="col-md-12 top-space text-center" style="display: none">
+											<!-- <p style="color: #029ddf; font-size: 20px;"><b>This learners license exam needs web camera, please keep the camera on throughout the exam</b></p><br> -->
+										<p style="color: #029ddf; font-size: 15px;"><b>This learners license exam needs web camera, please keep the camera on throughout the exam</b></p>
+										</div>
+																<div class="col-md-12 text-center" id="faceAuthReq" style="display: none" >
+																
+	 <div class="col-md-12 top-space " align="center" >
+	 											<ul id="progressbar">
+    											<!-- <li id="step1">Applicant Details</li>
+    											<li id="step2">Authenticate</li>
+    											<li id="step3">Proceed</li> -->
+    											<li id="step1">Applicant Details</li>
+    											<li id="step2">Authenticate</li>
+    											<li id="step3">Proceed</li>
+  												</ul>
+  												<p style="color: #029ddf; font-size: 20px;"><b><strong id="scCnt" ></strong> </b></p>
+    			<table>
+				<tr >
+					<td  align="right">
+		  <video id="video"  muted autoplay></video>
+		  <canvas id="canvas" style="position: absolute; top: 60px; left: 125px;"></canvas>
+		<!--   <canvas id="canvas" width="290px" height="200px" ></canvas>  -->
+		</td>
+					<td width="580px">
+						<table >
+							
+							<tr><td>1)  Please sit in the upright position</td></tr>
+							<tr><td>2)	Look straight into the camera, without any movement</td></tr>
+							<tr><td>3)	Make sure only applicant is in the frame</td></tr>
+							<tr><td><b>4) Maximum <strong id="maxText" ></strong> attempts for face authentication. After that applicant needs to <strong id="nextText" ></strong></b></td></tr>
+							<tr><td>5)	Click on Proceed to validate your credentials</td></tr>
+							<tr><td><div class="col-md-12 text-center">
+
+			<input type="button"  style="background:yellow;color:red;border:solid 1px red" class="btn top-space" id="capphto" value="Authenticate" 
+			onclick="startDetection();" />
+			<input type="button" class="btn top-space" id="capphto1" value="Proceed" 
+			onclick="faceVerifySubmit()" />
+			<input type="button" value="Exit"  class="btn top-space"
+													onclick="logout();window.close();" />
+													<input type="hidden" id="pCount" name="pCount" value="0" />
+	</div></td></tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<div class="col-md-12 text-center">
+
+		  	<h4 style="color: red"style="color: red;padding-top: 40px;"><strong id="message" ></strong></h4>
+			</div>
+<div class="col-md-12 text-center" >
+	 <div class="col-md-12 top-space " align="center" >
+    			
+			<table border="1">
+							<!-- <tr><td><b>Doâ€™s</b></td><td><b>Donâ€™t</b></td></tr> -->
+							<!-- <tr><td align="left">Please keep your web camera on throughout test duration</td><td align="left">Donâ€™t refresh your page while test is on</td></tr>
+							<tr><td align="left">Ensure proper lighting</td><td align="left">Donâ€™t close the test window</td></tr>
+							<tr><td align="left">Make sure you have a stable internet connection</td><td align="left">Donâ€™t wear any mask or sunglasses</td></tr>
+							<tr><td align="left">Try to restrict your movements</td><td align="left">Donâ€™t disable the camera till the test is complete.</td></tr>
+							<tr><td align="left">Make sure your laptop/desktop have sufficient power for the test duration.</td><td></td></tr> -->
+							<tr><td><b>Do’s</b></td><td><b>Don’t</b></td></tr>
+							<tr><td align="left">Please keep your web camera on throughout test duration</td><td align="left">Don’t refresh your page while test is on</td></tr>
+							<tr><td align="left">Ensure proper lighting</td><td align="left">Don’t close the test window</td></tr>
+							<tr><td align="left">Make sure you have a stable internet connection</td><td align="left">Don’t wear any mask or sunglasses</td></tr>
+							<tr><td align="left">Try to restrict your movements</td><td align="left">Don’t disable the camera till the test is complete.</td></tr>
+							<tr><td align="left">Make sure your laptop/desktop have sufficient power for the test duration.</td><td align="left">Please appear the test by yourself and don’t take help from others<br/>as built in spy system will detect any abnormality</td></tr>
+						</table>
+		</div>
+		
+
+</div>
+		</div>
+		
+
+</div>
+			<!--<div class="col-md-12 text-center" id="cam" style="display: none;">
+				 <h4 style="color: red">Image Being loaded.Please Wait and look into camera<br> 
+				<h4 style="color: red">System is getting ready, Please wait</h4><br/>
+			</div>-->
+			
+			<div class="col-md-12 text-center" id="NoFaceAuthReq"  style="display: none"> 
+
+			<input type="button"  class="btn top-space" id="capphto2" value="Proceed" 
+			onclick="return validateForm()" />
+			<input type="button"  value="Exit" class="btn top-space"
+													onclick="logout();window.close();" />
+
+	 </div> 
+	
+
+							<div id="service" class="col-md-12 top-space text-center">
+											<div
+												class="col-md-3 col-md-offset-2 control-label labeled text-right">
+												<!-- <label for="device">Select Device</label> -->
+												<label for="device">Select Device</label>
+											</div>
+											<div class="col-md-3">
+												
+												
+													<input type="radio" name="selectDevice" id="selectDevice1" value="1" style="size: 50px; text-align: center;" onchange="return clearVal('imageid')"/><label for="selectDevice1" style="size: 50px; text-align: center;">Secugen</label>
+
+											</div>
+											
+											<div class="col-md-6 top-space text-center">
+											<div class="col-md-4 control-label labeled ">
+													<!-- <input type="submit" id="verifywithAddhar"
+														value="Authenticate With Aadhar" class="btn top-space"
+														onclick="getstallThumbVerify();" /> -->
+														<input type="submit" id="verifywithAddhar"
+														value='Authenticate With Aadhar'class="btn top-space"
+														onclick="getstallThumbVerify();" />
+												</div>
+											<div class="col-md-3 control-label labeled ">
+												<!-- <input type="reset" value="Clear" class="btn top-space" />
+												<input type="button" value="Close" class="btn top-space"
+													onclick="javascript:window.close();" /></div> -->
+													 <input type="reset" value='Clear' class="btn top-space" />
+												<input type="button" value='Close' class="btn top-space"
+													onclick="javascript:window.close();" /></div>
+												<!-- 												<input type="button"
+													onclick="return stallCaptureThumb('FPImage1')"
+													value="StallThumbVerification" id="AuthorityVerification"
+													class="btn top-space">
+ -->
+												
+											</div>
+
+										</div>
+										<div id="otpButton" style="margin-left: 30%;"
+											class="col-md-4  control-label labeled top-space">
+											<div class="col-md-6  control-label labeled top-space">
+
+												
+												Enter the Aadhaar OTP<label id="enter"></label>
+											</div>
+
+											<div class="col-md-4  control-label labeled">
+												<input type="text" name="aadhaarOTP" maxlength="6" value="" id="otps" class="form-control input-sm" onkeypress="return onlyNumericsforApplNo(event);" placeholder="OTP"/>
+											</div>
+											<div class="col-md-2  control-label labeled">
+												
+													<input type="submit" value="Authenticate With Addhar OTP" id="verifywithOTP" name="authAuthenticateWithAddharOTP" class="btn btn-sm" onclick="return getOtpVerfication();"/>
+
+											</div>
+											<div class="col-md-12 text-center">
+											 <!-- <input	type="reset" value="Clear" class="btn top-space" /> 
+											 <input	type="button" value="Close" class="btn top-space"
+												onclick="javascript:window.close();" /> -->
+												<input	type="reset" value='Clear' class="btn top-space" /> 
+											 <input	type="button" value='Close' class="btn top-space"
+												onclick="javascript:window.close();" />
+											</div>
+										</div>
+										<div class="col-md-12 top-space text-center" id="sarathiButton">
+											<div 
+												style="margin-left: 30%;"
+												class="col-md-4  control-label labeled top-space">
+
+												<div class="col-md-6  control-label labeled top-space">
+
+													
+													Enter the Sarathi OTP<label id="enter"></label>
+												</div>
+
+												<div class="col-md-4  control-label labeled">
+													<input type="text" name="sarathiOtp" maxlength="6" value="" id="sarathiOtps" class="form-control input-sm" onkeypress="return onlyNumericsforApplNo(event);" placeholder="OTP"/>
+												</div>
+
+												<div class="col-md-2  control-label labeled">
+													<input type="submit" value="Authenticate With Sarathi OTP" id="sarthiOtp" class="btn btn-sm" onclick="verifySarathiOTP();"/>
+
+												</div>
+											</div>
+											<div class="col-md-12 text-center">
+											 <input	type="reset" value="Clear" class="btn top-space" /> 
+											 <input	type="button" value="Close" class="btn top-space"
+												onclick="javascript:window.close();" />
+											</div>
+										</div> 
+										<div align="center">
+											<h3><br/></h3>
+											<h4 class="red">
+												
+												</h4>
+										</div>
+										<div align="center">
+											<h4 class="red">
+													<ul id="errmsg" class="errorMessage">
+            <li><span></span></li>	</ul>
+
+											</h4>
+										</div>
+										<div class="col-md-12 text-center" id="validAppl" style="display: none;">
+										<!-- <h4 style="color: red">Please enter valid application number<br> -->
+										<h4 style="color: red">Please enter valid application number<br>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</h4>
+										</div>
+										<div class="col-md-12 text-center" id="State_is_different" style="display: none;">
+										<h4 style="color: red">Wrong state selected, Please select your state from state selection page.<br>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>	
+										<div class="col-md-12 text-center" id="validBrowser" style="display: none;">
+										<!-- <h4 style="color: red">Please enter valid application number<br> -->
+										<h4 style="color: red">Face Authentication feature best works in Chrome/Edge/Internet explorer, Please use any one of them.<br><br>
+										<input type="button" value="Exit"  class="btn top-space" onclick="window.close();" />
+										</h4>
+										</div>
+										<div class="col-md-12 text-center" id="tutorial" style="display: none;">
+										<!-- <h4 style="color: red">Applicant is Requested to go through the tutorials on road safety.<br>
+										<a href="sarathiTutorials.do">please click here go to road safety tutorials </a></h4> -->
+										<h4 style="color: red">Applicant is Requested to go through the tutorials on road safety.<br>
+										<a href="sarathiTutorials.do">please click here go to road safety tutorials </a></h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="quotaFlag" style="display: none;">
+										<!-- <h4 style="color: red">Sorry cannot conduct the LL Test as the Number of Learner Licenses issued for the day has exceeded the Maximum Learner License Quota defined by the Transport department. For any further information kindly contact your concerned RTO.<br> -->
+										<h4 style="color: red">Sorry cannot conduct the LL Test as the Number of Learner Licenses issued for the day has exceeded the Maximum Learner License Quota defined by the Transport department. For any further information kindly contact your concerned RTO.<br>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="faceauthmaxtimeallowed" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF FACE AUTHENTICATION ATTEMPTS. KINDLY CONTACT RTO AUTHORITY<br></h4> -->
+										<h4 style="color: red">This application has crossed maximum no (  <strong id="maxTimes" ></strong> times) of face authentication attempts. Kindly contact RTO authority.<br></h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="faceauthmaxtimeallowedslot" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF FACE AUTHENTICATION ATTEMPTS. KINDLY CONTACT RTO AUTHORITY<br>
+											<br><br><a id="maxPage" href="#" onclick='logout();window.close();window.opener.location.href="../slots/llslotbook.do?id=sarlltest";'>Click here to book an appointment</a>
+										</h4> -->
+										<h4 style="color: red">This application has crossed maximum no ( <strong id="maxTimes" ></strong> times) of face authentication attempts. Kindly contact RTO authority.<br></h4><br/>
+                                         <!-- <br><br><a id="maxPage" href="#" onclick='logout();window.close();window.opener.location.href="../slots/llslotbook.do?id=sarlltest";'>Click here to book an appointment</a> -->
+                                        </h4><br/>
+                                        <input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<!-- <div class="col-md-12 text-center" id="faceauthmaxtimeallowedDL" style="display: none;">
+										<h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF FACE AUTHENTICATION ATTEMPTS. <br>PLEASE OBTAIN APPOINTMENT AND CONTACT MLO, MALL ROAD ON THE DAY OF APPOINTMENT ALONG WITH ORIGINAL AADHAR CARD.<br>
+											<br><br><a id="maxPage" href="#" onclick='logout();window.close();window.opener.location.href="../slots/llslotbook.do?id=sarlltest";'>Click here to book an appointment to contact MLO</a>
+										</h4> -->
+										<div class="col-md-12 text-center" id="faceauthmaxtimeallowedDL" style="display: none;">
+										<h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF FACE AUTHENTICATION ATTEMPTS. <br>PLEASE OBTAIN APPOINTMENT AND CONTACT MLO, MALL ROAD ON THE DAY OF APPOINTMENT ALONG WITH ORIGINAL AADHAR CARD.<br>
+											<br><br><a id="maxPage" href="#" onclick='logout();window.close();window.opener.location.href="../slots/llslotbook.do?id=sarlltest";'>Click here to book an appointment to contact MLO</a>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="smartfaceauthmaxtimeallowedDL" style="display: none;">
+										<h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF FACE AUTHENTICATION ATTEMPTS. <br>PLEASE OBTAIN APPOINTMENT AND CONTACT MLO, MALL ROAD ON THE DAY OF APPOINTMENT ALONG WITH ORIGINAL AADHAR CARD.<br>
+										<!-- 	<br><br><a id="maxPage" href="#" onclick='logout();window.close();window.opener.location.href="../slots/llslotbook.do?id=sarlltest";'>Click here to book an appointment to contact MLO</a> -->
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="smartNoExam" style="display: none;">
+										<h4 style="color: red">YOUR EXAM IS NOT SCHEDULED. KINDLY CONTACT RTO AUTHORITY<br>
+										<!-- 		<br><br><a id="ne" href="#" onclick='applStatus("applViewStatus.do","noExam");'>Click here to verify Application Status</a> -->
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="NoExam" style="display: none;">
+										<!-- <h4 style="color: red">YOUR EXAM IS NOT SCHEDULED. KINDLY CONTACT RTO AUTHORITY<br>
+										<br><br><a id="ne" href="#" onclick='window.close();window.open("applViewStatus.do");'>Click here to verify Application Status</a> -->
+										<h4 style="color: red">YOUR EXAM IS NOT SCHEDULED. KINDLY CONTACT RTO AUTHORITY<br>
+										<br><br><a id="ne" href="#" onclick='logout();window.close();window.open("applViewStatus.do");'>Click here to verify Application Status</a>
+										<!-- <br><br><a id="ne" href="#" onclick='window.close();window.opener.location.href="applViewStatus.do";'>Click here to verify Application Status</a> -->
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="maxLogins" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF LOGIN ATTEMPTS FOR TODAY. PLEASE TRY AGAIN NEXT DAY ONWARDS<br>
+										</h4> -->
+										<h4 style="color: red">YOU HAVE CROSSED THE MAXIMUM NUMBER OF LOGIN ATTEMPTS FOR TODAY. PLEASE TRY AGAIN NEXT DAY ONWARDS<br>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="alreadyCompleted" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE ALREADY COMPLETED YOUR STALL EXAM<br></h4> -->
+										<h4 style="color: red">YOU HAVE ALREADY COMPLETED YOUR STALL EXAM<br></h4>
+										</div>
+										<div class="col-md-12 text-center" id="retestApplication" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE ALREADY COMPLETED YOUR STALL EXAM<br></h4> -->
+										<h4 style="color: red"><strong><strong id="retestApp" ></strong><br></h4>
+										</div>
+										<div class="col-md-12 text-center" id="allowedInRTO" style="display: none;">
+										<!-- <h4 style="color: red">YOU CAN TAKE EXAM FROM ONLY THE RTO OFFICE<br></h4> -->
+										<h4 style="color: red">YOU CAN TAKE EXAM ONLY FROM THE RTO OFFICE <br></h4>
+										</div>
+										<div class="col-md-12 text-center" id="expiredApplication" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE ALREADY COMPLETED YOUR STALL EXAM<br></h4> -->
+										<h4 style="color: red">YOUR APPLICATION IS EXPIRED, PLEASE START WITH NEW APPLICATION<br></h4>
+										</div>
+										<div class="col-md-12 text-center" id="smartcompleteFlow" style="display: none;">
+										<h4 style="color: red">YOU HAVE NOT COMPLETED THE APPLICATION FLOW TO SCHEDULE AN EXAM. 
+										<!-- 	<br>PLEASE CLICK HERE TO VIEW THE APPLICATION STATUS<br>
+										<br><br><a id="cf" href="#" onclick='applStatus("applViewStatus.do","complete");'>Click here to verify Application Status</a> -->
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="completeFlow" style="display: none;">
+										<!-- <h4 style="color: red">YOU HAVE NOT COMPLETED THE APPLICATION FLOW TO SCHEDULE AN EXAM. <br>PLEASE CLICK HERE TO VIEW THE APPLICATION STATUS<br>
+										<br><br><a id="cf" href="#" onclick='logout();window.close();window.open("applViewStatus.do");'>Click here to verify Application Status</a> -->
+										<!-- <br><br><a id="cf" href="#" onclick='window.close();window.opener.location.href="applViewStatus.do";'>Click here to verify Application Status</a> -->
+										<h4 style="color: red">YOU HAVE NOT COMPLETED THE APPLICATION FLOW TO SCHEDULE AN EXAM. <!-- <br>PLEASE CLICK HERE TO VIEW THE APPLICATION STATUS<br> -->
+										<br><br><a id="cf" href="#" onclick='window.close();window.open("applViewStatus.do");'>Click here to verify Application Status</a>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="scheduleDate" style="display: none;">
+										<!-- <h4 style="color: red">YOUR EXAM IS NOT SCHEDULED FOR TODAY. PLEASE TRY ON SCHEDULED DATE<br> -->
+										<h4 style="color: red">YOUR EXAM IS NOT SCHEDULED FOR TODAY. PLEASE TRY ON SCHEDULED DATE<br>
+										</h4><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										
+										<div class="col-md-12 text-center" id="smartphotoUpload" style="display: none;">
+										<h4 style="color: red">
+											Please upload your recent photo of proper size as per instructions to proceed further for taking LL test.<br><br>
+										</h4>
+										<h5 align="center" style="color: red">
+											
+														Before submitting please ensure that correct, recent photo is uploaded because the same will be printed on your LL and DL,<br><br>
+														There will be no option for replacement or editing the photo already uploaded by you,<br><br> 
+														Hence ensure correct and recent photo is uploaded.<br>
+											<!--	<br><br><a id="photoPage" href="#" onclick='applStatus("biometrics.do","photoupload");'>Click here to open Upload Photo Page</a>  -->
+										</h5><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="photoUpload" style="display: none;">
+										<!-- <h4 style="color: red">
+											Please upload your recent photo of proper size as per instructions to proceed further for taking LL test.<br><br> -->
+											<h4 style="color: red">
+											Please upload your recent photo of proper size as per instructions to proceed further for taking LL test.<br><br>
+										</h4>
+										<h5 align="center" style="color: red">
+											
+														<!-- Before submitting please ensure that correct, recent photo is uploaded because the same will be printed on your LL and DL,<br><br>
+														There will be no option for replacement or editing the photo already uploaded by you,<br><br> 
+														Hence ensure correct and recent photo is uploaded.<br> -->
+														Before submitting please ensure that correct, recent photo is uploaded because the same will be printed on your LL and DL,<br><br>
+														There will be no option for replacement or editing the photo already uploaded by you,<br><br> 
+														Hence ensure correct and recent photo is uploaded.<br>
+		
+											<br><br><a id="photoPage" href="#" onclick='logout();window.close();window.opener.location.href="biometrics.do";'>Click here to open Upload Photo Page</a>
+										</h5><br/>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										<div class="col-md-12 text-center" id="capturePhoto" style="display: none;">
+										<!-- <h4 style="color: red">
+											Please capture your recent photo to proceed further for taking LL test.<br><br> -->
+											<h4 style="color: red">
+											Please capture your recent photo to proceed further for taking LL test.<br><br>
+										</h4>
+										<input type="button" value="Reset"  class="btn top-space" onclick="location.reload();" />
+										</div>
+										
+										<div class="col-md-12 top-space text-center" id="smartLogout" align="center" style="display: none;">
+											<input type="button"  value='Exit'class="btn top-space" onclick="logout();window.close();" /><br>
+										</div>	
+
+										<!-- <div class="col-md-12 text-center" id="logindiv">
+										 	<input type="submit" value="Login" class="btn top-space"
+												onclick="return validateForm()" id="login" /> <input
+												type="reset" value="Clear" class="btn top-space" onclick="return back()"/> <input
+												type="button" value="Close" class="btn top-space"
+												onclick="javascript:window.close();" />
+												<div class="col-md-12 top-space text-center">
+											<p style="color: red" class="red">NOTE:If you have not received LLTest Password. Please click Resend Password button </p>
+											
+										</div>
+
+										</div> -->
+										
+										<!--<div class="col-md-12 text-center" id="logindivforOD" style="display: none;">
+											<input type="submit" value="Login" class="btn top-space"
+												onclick="return validateFormforOD()" id="login1" />
+												 <input
+												type="reset" value="Clear" class="btn top-space" onclick="return back()"/> 
+												<input
+												type="button" value="Close" class="btn top-space"
+												onclick="javascript:window.close();" />
+                                            <div class="col-md-12 top-space text-center">
+											<p style="color: red" class="red">NOTE:If you have not received LLTest Password. Please click Resend Password button </p>
+										</div>
+										</div><div class="col-md-12 text-center" id="logindiv">
+										<div class="col-md-12 top-space text-center" align="center">
+																</div></div>
+										 										<div id="applet" style="display: none;">
+											<div class="col-md-12 top-space text-center">
+												<applet code="org.nic.sow4.ThumbCaptureForAll"
+													name="JSGDApplet"
+													archive="BDJ/AllDeviceISOApplet.jar,BDJ/FDxSDKPro.jar,
+ 											BDJ/commons-codec-1.8-javadoc.jar,BDJ/commons-codec-1.8-sources.jar,BDJ/commons-codec-1.8-test-sources.jar, 
+											BDJ/commons-codec-1.8-tests.jar,BDJ/commons-codec-1.8.jar,BDJ/BioEnableWrapper.jar,BDJ/secugenWrapper.jar,BDJ/MorphoAPI_2_0.jar"
+													height="0"></applet>
+													<input
+												type="reset" value="Clear" class="btn top-space" /> 
+												<input
+												type="button" value="Close" class="btn top-space"
+												onclick="javascript:window.close();" />
+
+												<input type="submit" value="StallThumbVerification" id="AuthorityVerification" name="method:stallVerfication" class="btn top-space" onclick="return stallVerifyThumb()"/>
+
+											</div>
+										</div>
+ --%>
+										<!-- <div class="col-md-12 top-space text-center">
+											<p style="color: red" class="red">NOTE:If you have not received LLTest Password. Please click Resend Password button </p>
+										</div> -->
+
+										
+
+										<input type="hidden" name="carry" value="" id="carry"/>
+										<input type="hidden" name="minutia" value="" id="minutia"/>
+										<input type="hidden" name="hidst" value="" id="hidst"/>
+										<input type="hidden" name="" value="30" id="quality"/>
+										<input type="hidden" name="" value="Y" id="localshow"/>
+										<input type="hidden" name="" id="iheight"/>
+										<input type="hidden" name="" id="iwidth"/>
+										<input type="hidden" name="" id="snumber"/>
+										
+											<input type="hidden" name="countofattempts" value="" id="countofattempts"/>
+										<input type="hidden" name="" value="10000" id="timeout"/>
+										<input type="hidden" name="flag" value="false" id="flag"/>
+										<input type="hidden" name="aadharFlag" value="false" id="aadharFlag"/>
+										<input type="hidden" name="aadharOTP" value="false" id="aadharOTP"/>
+										<input type="hidden" name="stallPidData" value="" id="stallPidData"/>
+										<input type="hidden" name="otpTxn" value="" id="otpTxn"/>
+										<input type="hidden" name="addharThumbCount" value="" id="addharThumbCount"/>
+										<input type="hidden" name="addharNumber" value="" id="addharNumber"/>
+										<input type="hidden" name="rtocode" value="" id="rtocode"/>
+										<input type="hidden" name="scFaceAuthReqAiLib" id="scFaceAuthReqAiLib" />
+										<input type="hidden" name="smartExam" id="smartExam" />
+										<input type="hidden" name="faceauthmodel" id="faceauthmodel" value="https://sarathi.parivahan.gov.in/cdn-sarathi/models" />
+										
+											
+										<input type="hidden" name="isMatch" id="isMatch"/>
+										
+		<input type="hidden" name="firstCap" id="firstCap" value="true" />
+		<input type="hidden" name="CapPho" id="CapPho" />
+								
+ </form>
+
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+
+		</div>
+		
+	<!-- </div> -->
+
+</body>
+<script type="text/javascript">
+/* function startDetection() {
+	var base64Image=applimg;
+//	var firstCap=document.getElementById('firstCap').value;
+	//var ismatch1=document.getElementById('isMatch').value
+	const newImage = new Image();
+	//newImage.src = applimg;
+    document.body.appendChild(newImage);
+    if(firstCap=="true"){
+    	document.getElementById('firstCap').value="false";
+    		 aware.start(base64Image, 'video', 'message', 5, 10).then((result) => {
+               newImage.src = result.photo;
+               alert("hi======="+result.isMatch)
+
+                 console.log(result.isMatch);
+            document.getElementById('CapPho').value=result.photo;          
+           document.getElementById('isMatch').value=result.isMatch;
+          // ismatch1=result.isMatch;
+            if(result.isMatch==true){
+				$("input[type=submit]").attr("disabled","false");
+				//$("#login").attr("disabled","false");
+            }else{
+            	alert("hello");
+				//$("input[type=submit]").attr("disabled","false");
+				//$('input[type=submit]').prop('disabled','false');
+				$("input[type=submit]").prop("disabled",false);
+
+            }
+    	});
+    }else{
+    	aware.reStart().then((result) => {
+        	//alert("Sucess"+result.isMatch);
+    		//alert("result.photo"+result.photo); 
+           // newImage.src = result.photo;
+            console.log(result.isMatch);
+            document.getElementById('CapPho').value=result.photo;
+            document.getElementById('isMatch').value=result.isMatch;
+    	});
+     }
+}
+  */
+function startDetection() {
+	  $("#progressbar li").eq(1).addClass("active");
+	  $("#progressbar li").eq(0).addClass("process");
+	  $("#capphto").attr('disabled',true);
+	  var pCount = Number(document.getElementById("pCount").value);
+	  //alert(pCount+"   ");
+	  //$("#capphto").attr('disabled',true);
+	pCount = pCount+1;
+	document.getElementById("pCount").value = pCount; 
+	if(pCount<10)
+	{ 
+		//$("input[type=submit]").attr("disabled",true);
+	//	var rtocode = document.authentication.rtocode.value;
+	//	var stcode=rtocode.substring(0,2);
+		
+  	 var base64Image=applimg;
+  	//const base64Image = 'mypic2.jpg';
+
+const newImage = new Image();
+document.body.appendChild(newImage);
+
+var resultMatch=false;
+var resultPhoto;
+var scFaceAuthReqAiLib=document.getElementById('scFaceAuthReqAiLib').value;
+var apiSwitchFlag="AIFace";
+var serverApi="";
+var userDetailsFAPM="";
+var applno=document.authentication.llappln.value;
+
+if(scFaceAuthReqAiLib=="AI")
+{
+	serverApi="https://sarathi.parivahan.gov.in/sarathiWS/rsServices/imgVerifaction/imgVerify";
+	userDetailsFAPM="{\"examCode\": \"102\", \"subCode\": \"1001\", \"eNo\":"+applno+", \"slotId\":\"slotId\"}";
+	apiSwitchFlag="AIFace";
+}
+
+document.getElementById("faceAuthReq").style.cursor= 'progress';
+
+document.getElementById("message").innerHTML= 'Face authentication is in process..';
+
+aware.start(base64Image, 'video', 'message', 5, 40, serverApi, userDetailsFAPM, apiSwitchFlag ).then(
+		function(result){
+			// newImage.src = result.photo;
+	 console.log("result.isMatch :::::::::::::::::::::::::");
+		   console.log("result :::::::::::::::::::::::::"+result.isMatch);
+		  // console.log("result.photo :::::::::::::::::::::::::::"+result.photo);
+			   
+			   resultMatch=result.isMatch;
+			   resultPhoto=result.photo;
+
+			
+			  // $("#capphto1").attr('disabled',false);
+			   //document.getElementById('CapPho').value=resultPhoto;
+			  // document.getElementById('isMatch').value=resultMatch;
+			  // document.getElementById("faceAuthReq").style.cursor= 'cursor';
+			  
+			   var link = 'saveFaceAuthData.do'; 
+			  
+			   if(resultMatch==true || resultMatch=="true"){	
+				   try {
+					   $("#capphto1").attr('disabled',true);
+					   $("#capphto").attr('disabled',true);
+					   $("#llappln").attr('disabled',true);
+					   $("#pwd").attr('disabled',true);
+					   
+						$.ajax({ 
+							type : 'POST',
+							url : link,
+							data : {
+								applno : document.authentication.llappln.value,
+								rtocode :document.authentication.rtocode.value,
+						 		faceres :1,
+						 		CapPho: resultPhoto
+							},
+							dataType : 'json',
+							success : function(data) {
+								$("#capphto1").prop('disabled',false);
+								$("#capphto").prop('disabled',true);
+								$("#message").html('Click on Proceed to validate your credentials');
+							},
+							error : function() {
+								//alert(error1);
+								$("#capphto1").prop('disabled',true);
+					   			$("#capphto").prop('disabled',true);
+								$("#message").html('Face Authentication is being tampered, please Exit and try again');
+							}
+						});
+						} catch (err) {
+							//alert("error");
+						}
+					//$("input[type=submit]").attr("disabled",false);
+					// document.getElementById('capphto').style.display="none";
+
+					
+			   }else{
+				   try {
+					   $("#capphto1").attr('disabled',true);
+					   $("#capphto").attr('disabled',true);
+
+						$.ajax({
+							type : 'POST',
+							url : link,
+							data : {
+								applno : document.authentication.llappln.value,
+								rtocode : document.authentication.rtocode.value,
+								faceres :0,
+								CapPho: resultPhoto
+							},
+							dataType : 'json',
+							success : function(data) {},
+							error : function() {
+								//alert("error");
+								$("#capphto1").prop('disabled',true);
+					   			$("#capphto").prop('disabled',true);
+							}
+						});
+						} catch (err) {
+							//alert("error");
+						}
+					//$("input[type=submit]").prop("disabled",false);
+					//document.getElementById('capphto').style.display="none";
+			   } 
+		});
+	
+	}
+	else
+	{
+		document.getElementById("message").innerHTML= 'Maximum 3 attempts are allowed to authenticate';
+		document.getElementById("capphto").disabled= 'true';
+	}
+	
+	
+}  
+  
+ 
+  function faceVerifySubmit()
+  {
+	  $("#progressbar li").eq(2).addClass("active");
+	  $("#progressbar li").eq(1).addClass("process");
+	  $("#progressbar li").eq(0).addClass("process");
+	  $("#llappln").attr('disabled',false);
+	  $("#pwd").attr('disabled',false);
+	  
+	  //$("#llappln").attr('disabled',false);
+	  //$("#pwd").attr('disabled',false);
+	   
+	  //var match = document.getElementById("message");
+	 //alert(document.getElementById("isMatch").textContent);alert(match.textContent);
+	  //var rtocode = document.authentication.rtocode.value;
+	  //var stcode=rtocode.substring(0,2);
+	  //if(match.textContent=='Thank you. Authentication completed.')
+	  //{
+			//code for generating salted password
+			//alert(document.forms["authentication"]["llappln"].value);
+			var llappln = document.forms["authentication"]["llappln"].value;
+			var randomSeed = Math.floor((Math.random() * 100) + 1);
+			var sha256password = SHA256((document.forms["authentication"]["pwd"].value));
+			var saltPassword = SHA256(sha256password + randomSeed);
+			document.getElementById('randomSeed').value = randomSeed;
+			document.getElementById('saltPassword').value = saltPassword;
+			document.forms["authentication"]["pwd"].value = saltPassword;
+			document.forms["authentication"]["llappln"].value = llappln;
+			//$("#llappln").attr('disabled',true);
+			document.authentication.submit();
+	  //}
+  }
+  function progressStart()
+  {
+	  $("#progressbar li").eq(0).addClass("active");
+  	$("#capphto").attr('disabled',true);
+	$("#capphto1").attr('disabled',true);
+  }
+  function smartLock()
+  {
+	  var applno=document.forms["authentication"]["llappln"].value;
+	  var smartExam=document.forms["authentication"]["smartExam"].value;
+//	  alert("smartExam ::: "+smartExam+" :: "+document.authentication.smartExam.value);
+	  //if(smartExam=='Y' || smartExam=='E')
+	  //	create_hs(applno);
+  }
+  function applValidate()
+  {
+	  var applno=document.forms["authentication"]["llappln"].value;
+	  //create_hs(applno);	 
+	  /*LL Application Number - null/empty validation  */
+		if (document.forms["authentication"]["llappln"].value == null
+				|| document.forms["authentication"]["llappln"].value == "") {
+			alert("LL Application Number must not empty");
+			document.forms["authentication"]["llappln"].focus();
+			return false;
+		}
+		/*LL Application Number - number validation  */
+		else if (isNaN(document.forms["authentication"]["llappln"].value)) {
+			alert("LL Application Number must be a number");
+			document.forms["authentication"]["llappln"].value = "";
+			document.forms["authentication"]["llappln"].focus();
+			return false;
+		} else if (document.forms["authentication"]["llappln"].value.length > 10) {
+			alert("Enter valid LL Application Number");
+			document.forms["authentication"]["llappln"].value = "";
+			document.forms["authentication"]["llappln"].focus();
+			return false;
+		}
+  }
+  function dobValidation()
+  {
+		var spclChars = "!@#$%^&*()+=[]\\\';,./{}|\":<>?"; // specify special characters 
+		var content = document.forms["authentication"]["dob"].value;
+	  /*Date of Birth - null/empty validation  */
+		if (document.forms["authentication"]["dob"].value == null
+				|| document.forms["authentication"]["dob"].value == "") {
+			alert("Date of Birth must not empty");
+			document.forms["authentication"]["dob"].focus();
+			return false;
+		}
+		/*Date pattern validation */
+		else if (!document.forms["authentication"]["dob"].value
+				.match(/^(0[1-9]|[12][0-9]|3[01])[\ \-.](?:(0[1-9]|1[012])[\ \-.](19|20)[0-9]{2})$/)) {
+			alert("Date Of Birth Should be in dd-mm-yyyy format only");
+
+			document.forms["authentication"]["dob"].focus();
+			return false;
+		}
+		/*Date of Birth - Age(must be >= 16yrs) validation  */
+		else if (document.forms["authentication"]["dob"].value != null
+				&& document.forms["authentication"]["dob"].value != ""
+				&& getAge(document.forms["authentication"]["dob"].value) < 16) {
+			alert("Age must be greater than or equal to 16 years only");
+
+			document.forms["authentication"]["dob"].focus();
+			return false;
+		}
+		else if(content.length>0)
+		{
+			for (var i = 0; i < content.length; i++) {
+				if (spclChars.indexOf(content.charAt(i)) != -1) {
+					alert("Special characters are not allowed.");
+	
+					document.forms["authentication"]["dob"].focus();
+					return false;
+				}
+			}
+		}
+	  
+	    if(document.forms["authentication"]["pwd"].value.length>5)
+	    {
+	    	$("#progressbar li").eq(1).addClass("active");
+	    	$("#progressbar li").eq(0).addClass("process");
+	    	$("#capphto").attr('disabled',false);
+	    	$("#capphto1").attr('disabled',true);
+	    	document.getElementById("message").innerHTML= 'Click on Authenticate Button to verify the photo';
+	    }
+  }
+  function pwValidation()
+  {
+	  /*Password - null/empty validation  */
+		if (document.forms["authentication"]["pwd"].value == null
+				|| document.forms["authentication"]["pwd"].value == "") {
+			alert("Password must not empty");
+			document.forms["authentication"]["pwd"].focus();
+			return false;
+		}
+  }
+  function pwVerify(pwd)
+  {
+	  if(pwd.value.length>=6)
+	  {
+		  if(typeof document.forms["authentication"]["dobdiv"]==='undefined')
+		  {
+			  	$("#progressbar li").eq(0).addClass("process");
+				$("#progressbar li").eq(1).addClass("active");
+				$("#capphto").attr('disabled',false);
+		    	$("#capphto1").attr('disabled',true);
+		    	document.getElementById("message").innerHTML= 'Click on Authenticate Button to verify the photo';
+		  }
+		  else
+		  {
+			  if(document.forms["authentication"]["dob"].value == null
+				|| document.forms["authentication"]["dob"].value == ""
+				|| document.forms["authentication"]["dob"].value.length<=0)
+			  {
+		  		document.forms["authentication"]["dob"].focus();
+			  	return false;
+		  	  }
+		  	  else
+	      	  {
+					$("#progressbar li").eq(0).addClass("process");
+					$("#progressbar li").eq(1).addClass("active");
+					$("#capphto").attr('disabled',false);
+	    			$("#capphto1").attr('disabled',true);
+	    			document.getElementById("message").innerHTML= 'Click on Authenticate Button to verify the photo';
+	      	  }
+		  }
+	  }
+	  else
+	  {
+			$("#progressbar li").eq(0).addClass("active");
+			$("#progressbar li").eq(1).addClass("");
+			$("#capphto").attr('disabled',true);
+	    	$("#capphto1").attr('disabled',true);
+	    	document.getElementById("message").innerHTML= '';
+	  }
+  }
+  $(window).on('load',function(){
+	//  function smartTest()
+	//  {
+	 	  var params = window.location.search.substring(1).split("&");
+		  var param = params[0].split('=');
+		  const pertype=param[1];
+		  var userappl = '12345';
+	 
+		  if(pertype!=null && pertype==='Anugyna')
+		  {
+		  	  create_hs(userappl,pertype);
+		  }
+	 // });
+  });
+</script>
+</html>
+			</div>
+<!-- 			<div class="footer"> -->
+				<html>
+
+<head>
+
+
+<style>
+.fa
+{
+    font-size: 18px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+/*     position: absolute; */
+    top: 7px;
+}
+/* .list-unstyled > li
+{
+padding-left: 50px;
+} */
+.ip_address_text
+{
+color: #fff; 
+padding: 0px 0px 7px 10px; 
+font-style: italic; 
+font-size: 12px;
+}
+.footer_main {
+	background-color: #1ca6ef;
+	padding: 5px 0px 0px 0px;
+}
+
+.footer_main ul li a {
+	color: #141111;
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	line-height: 25px;
+}
+
+.designed_by {
+	color: #141111;
+	font-size: 10.5px;
+	letter-spacing: 0.2px;
+	font-style: italic;
+}
+
+.containermsg_vani p {
+	text-align: initial;
+}
+
+.footer_chat_box {
+	text-align: center;
+}
+
+.left {
+	left: 0;
+	background-color: inherit !important;
+}
+
+.right {
+	right: 0;
+	background-color: inherit !important;
+}
+
+.chatbutton {
+	width: 100px;
+	height: 100px;
+}
+.change_state
+{
+color:#141111 !important; 
+letter-spacing: 0.2px; 
+font-size: 13px;
+text-decoration: none;
+}
+#pdfModal {
+}
+.ekycfooter-content a
+{
+color: darkblue !important;
+font-weight: bold !important;
+}
+
+@media ( min-width : 600px) {
+	/* For tablets & desktop: */
+	.chatbutton {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.footer_main p {
+		padding: 0px 0px 0px 0px;
+	}
+	.footer_main {
+		text-align: center;
+	}
+	.footer_chat_box {
+		text-align: center;
+	}
+	.ip_address_text
+	{
+	padding: 10px 0px 0px 0px; 
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.footer_main {
+		text-align: center;
+	}
+	.footer_chat_box {
+		text-align: center;
+	}
+}
+
+.popupclose {
+	background-color: white !important;
+	color: #695f5f;
+	opacity: 1;
+	border-radius: 25px;
+	width: 26px;
+	height: 25px;
+	text-align: center;
+	box-shadow: 1px 1px 2px rgb(0 0 0);
+	-moz-box-shadow: 1px 1px 2px rgb(0 0 0);
+	-webkit-box-shadow: 1px 1px 2px rgb(0 0 0);
+	-o-box-shadow: 1px 1px 2px rgb(0 0 0);
+}
+
+.popupli {
+	padding: 5px 6px;
+    background-color: #3ba8c4;
+    margin-bottom: 1% !important;
+    font-size: 14.5px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 3px 5px rgb(0 0 0/ 50%);
+    -webkit-box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+    -o-box-shadow: 0 3px 5px rgb(0 0 0/ 50%);
+    border: 1px solid rgba(0, 0, 0, 0);
+/*     cursor: pointer; */
+	background-color: #0035c9;
+    font-size: 14.5px;
+    letter-spacing: 0.05em;
+    font-family: system-ui;
+}
+
+.popupli:hover {
+	box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-moz-box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-o-box-shadow: 0 0px 0px rgb(0, 0, 0);
+}
+
+.popup-servnames:hover, .popupfilepath:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.popupspan {
+	font-size: 17px;
+	padding-right: 9px;
+	color: #ffffff;
+}
+
+.modalpopup-header {
+	padding: 10px;
+	border-bottom: 0;
+	background: #074e81;
+	font-family:'Source Code Pro', sans-serif;
+	box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-moz-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-webkit-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-o-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+}
+
+#contactless_statepopup_title {
+	margin: 0%;
+	color: white;
+	text-align: center;
+	font: 20px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
+	letter-spacing: 0.03em;
+	text-shadow: 0 -1px 1px rgb(0 0 0/ 50%);
+}
+
+.modalpopup-body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-height: 200px;
+	max-height: 600px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.modalpopup-body {
+		max-height: 400px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.modalpopup-body {
+		max-height: 500px;
+	}
+	.parivahan_footerlink,
+	.change_state
+	{
+	/* margin-left: -52px; */
+	}
+}
+
+.ekycheader {
+	font-family: system-ui; 
+	letter-spacing: 0.02em; 
+	font-size: 13px; 
+	/* font-weight: bold; */
+	line-height: 1.8em;
+	text-align: justify;
+}
+@media only screen and (min-width: 1200px)
+{
+.parivahan_footerlink, .change_state {
+   /*  margin-left: -39px; */
+}
+}
+
+.popup-servnames {
+	color: #fff;
+    margin-right: 2%;
+}
+
+.popupfilepath {
+	/* font-size: 20px; */
+    cursor: pointer;
+    color: #fff;
+}
+
+.bhashini-note {
+    width: 100%;
+    border: 1px solid deepskyblue;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+   /*  font-size: 200px; */
+    padding: 1px;
+    text-align: center;
+
+    animation: glowBlink 1s infinite alternate;
+}
+
+
+@keyframes glowBlink {
+    0% {
+        background-color: yellow;
+        box-shadow: 0 0 5px deepskyblue;
+    }
+    100% {
+        background-color: #ffe6e6;
+        box-shadow: 0 0 20px deepskyblue, 0 0 40px deepskyblue;
+    }
+}  
+
+</style>
+</head>
+<body>
+
+<!------------------footer------------------>
+<section class="footer_main" style="clear:both;">
+<div class="container-fluid">
+<div class="row" style="clear:both;">
+<div class="col-md-11 col-sm-10" style="">
+<div class="col-md-12 col-sm-12 text-center">
+	<p style="color: #ffffff; font-size: 12px; font-style: italic; margin: 0;">
+		Best viewed in Google Chrome 140+, Microsoft Edge 140+, Mozilla Firefox 140+, and Opera 120+ browsers. Recommended screen resolution: 1366 * 768 or higher.
+	</p>
+</div>
+<div class="row">
+				<div class="col-md-4 col-sm-4" style="">
+					
+					<div class="col-md-7">
+					<p class="designed_by">Designed, developed and hosted by <b style="color: #0072ff;">S40</b> </p>
+					<div class="nic_logo">
+						<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/footer/logo.png" alt="NIC" style="cursor: pointer;" onclick="javascript:w=window.open('http://www.nic.in','mywin');">
+					</div>
+					</div>
+					<div class="col-md-5">
+					
+
+					
+					<div class="gov_logo">
+						<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/footer/digital_logo_main.png" alt="Gov" border="0" style="cursor: pointer;" onclick="javascript:w=window.open('https://www.digitalindia.gov.in','mywin');">
+					</div>
+					
+									
+					</div>
+					
+				</div>
+
+				
+
+			</div>
+			
+			<div class="bhashini-note">
+				<h4>Correctness of the translation into the regional language lies with the respective State Transport Department. </h4>
+		  </div>
+		  
+
+	</div>
+	<div class="col-md-1 col-sm-2 col-xs-12 mb_center footer_chat_box" style="cursor:pointer;">
+		
+		
+	</div>
+</div>
+</div>
+</section>
+
+	<div class="modal fade" data-backdrop="static" data-keyboard="false"
+		id="contactless_statepopup" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!--  style="max-width: 500px; margin: 30px auto;" -->
+			<div class="modal-content">
+				<div class="modal-header modalpopup-header">
+					<button type="button" class="close popupclose" data-dismiss="modal"
+						style="color: #2199e0;">x</button>
+					<h4 class="" id="contactless_statepopup_title">Faceless
+						Services</h4>
+				</div>
+				<div class="modal-body finalAlertBody modalpopup-body">
+					<div class="row">
+						<div class="col-md-12 top-space" id="contactless_services_list_"></div>
+						<div class="re-issue" style="background-color: #0035c9;font-size: 14.5px;letter-spacing: 0.05em; font-family: system-ui;"></div>
+					</div>
+					<div class="col-md-12 top-space center">
+						<input type="button" data-dismiss="modal" value="Skip" class="btn"
+							style="float: right; background: #2199e0;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+<script>
+	$(document).ready(function() {
+	    $( document ).on( 'focus', ':input', function() {
+	        $( this ).attr( 'autocomplete', 'off' );
+	    });
+	});
+	$('input').attr('autocomplete','off');
+</script>
+</body>
+</html>
+
+<!-- 			</div> -->
+		</div>
+	</div>
+
+<!-- Your website content goes here -->
+<!-- BHASHINI Translation Plugin Script 
+<p> Translate This </p>
+<p class="bhashini-skip-translation">Skip Translating This</p>
+<script type="text/javascript" src="https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js"></script>
+-->
+
+	  
+ <script type="text/javascript"
+	src="https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js" defer></script>	
+	
+<script type="text/javascript">
+	window.onload = function() {
+		$("input:not([type=button]):not([type=reset]):not([type=submit])").addClass("bhashini-skip-translation");
+		$("select, select optgroup,select option,textarea,datalist,datalist > option").addClass("bhashini-skip-translation");
+		$("table, thead, tbody, tr, th, td, caption, col, colgroup").addClass("bhashini-skip-translation");
+	//setLanguageComboBox('Sarathi_Lang_ID');
+	};
+</script>
+	
+    
+    
+	
+</body>
+<!-- Only for public, reset state code if not available. Redirecting to state selection if completely not available. -->
+
+
+
+	<script>
+		function getCookie(cname) {
+		  var name = cname + "=";
+		  var decodedCookie = decodeURIComponent(document.cookie);
+		  var ca = decodedCookie.split(';');
+		  for(var i = 0; i < ca.length; i++) {
+		    var c = ca[i];
+		    while (c.charAt(0) == ' ') {
+		      c = c.substring(1);
+		    }
+		    if (c.indexOf(name) == 0) {
+		      return c.substring(name.length, c.length);
+		    }
+		  }
+		  return "";
+		}
+		
+		$(document).ready(function() {
+			var act = 'http://sarathi.parivahan.gov.in/sarathiservice/authenticationaction.do?authtype=Anugyna';
+		if ((act.indexOf('stateSelection.do') == -1)
+							&& (act.indexOf('stateSelection!clr.do') == -1)
+							&& (act.indexOf('errmsg.do') == -1)
+							&& (act.indexOf('errorpage.do') == -1)
+							&& (act.indexOf('CscLandingAction.do') == -1)
+							&& (act.indexOf('feedbackMobAuth.do') == -1)
+							&& (act.indexOf('feedback.do') == -1)
+							&& (act.indexOf('feedbackSave.do') == -1)
+							&& (act.indexOf('sarathiApp.do') == -1)
+							&& (act.indexOf('authenticationaction.do') == -1)
+							&& (act.indexOf('instruction.do') == -1)
+							&& (act.indexOf('examselectaction.do') == -1)
+							&& (act.indexOf('stallexamaction.do') == -1)
+							&& (act.indexOf('dlreportaction.do') == -1)
+							&& (act.indexOf('dlqrresultotpreq.do') == -1)) {
+						var cd = getCookie("STATEID");
+						$.ajax({
+							type : "POST",
+							url : "stateRefreshReq.do",
+							dataType : 'json',
+							data : {
+								param : cd
+							},
+							success : function(response) {
+							console.log(response.reditnUrls.redirect);
+								is_s5redirection = response.reditnUrls.isnew;
+								if (response.reditnUrls.redirect === 'reset') {
+									location.assign("stateSelection.do");
+								} else {
+									if ($('#state_inassociation').length) {
+										$("#state_inassociation").html(                   
+												response.reditnUrls.label);
+									}
+								}
+							}
+						});
+					}
+				});
+	</script>
+
+
+
+<script>
+$(document).ready(function() {
+	
+	var loc = "?authtype=Anugyna";
+	console.log("loc:"+loc);
+	if( loc.split("=")[0] == "?request_locale"){
+		console.log("new myloca:"+loc);
+		$('#selectLang').val(loc);
+		sessionStorage.setItem("SelItem", loc);
+	}else{
+		
+		var selItem = sessionStorage.getItem("SelItem"); 
+		console.log("use sessionstorage:"+selItem)
+	    $('#selectLang').val(selItem);
+	}
+		/* var selItem = sessionStorage.getItem("SelItem");  
+    $('#selectLang').val(selItem);
+    $('#selectLang').change(function() { 
+        var selVal = $(this).val();
+        sessionStorage.setItem("SelItem", selVal);
+    }); */
+    
+      // bind change event to select
+      /* $('#selectLang').change(function () {
+          var url = $(this).val(); 
+          	alert(url);// get selected value
+         // $('#langSelection1').val($(this).val());
+          $("#selectLang").val($(this).val()).trigger("chosen:updated");
+      }); */
+	/* window.onload = function() {
+	    var selItem = sessionStorage.getItem("SelItem");  
+	    $('#selectLang').val(selItem);
+	    }
+	    $('#selectLang').change(function() { 
+	        var selVal = $(this).val();
+	        sessionStorage.setItem("SelItem", selVal);
+	    }); */
+    });
+</script>
+
+</html>
